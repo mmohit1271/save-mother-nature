@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Take Action - Save Mother Nature</title>
+</head>
+<body>
+  <h1>Take Action</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/learn">Learn</a>
+    <a href="/get-involved">Get Involved</a>
+    <a href="/take-action">Take Action</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <section>
+    <h2>Actions You Can Take</h2>
+    <ul>
+      <% actions.forEach(action => { %>
+        <li>
+          <strong><%= action.action %></strong>: <%= action.description %>
+        </li>
+      <% }) %>
+    </ul>
+  </section>
+  <footer>© 2025 Save Mother Nature</footer>
+</body>
+</html>
