@@ -7,25 +7,43 @@
   <title>Take Action - Save Mother Nature</title>
 </head>
 <body>
-  <h1>Take Action</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/learn">Learn</a>
-    <a href="/get-involved">Get Involved</a>
-    <a href="/take-action">Take Action</a>
-    <a href="/contact">Contact</a>
-  </nav>
-  <section>
-    <h2>Actions You Can Take</h2>
-    <ul>
-      <% actions.forEach(action => { %>
-        <li>
-          <strong><%= action.action %></strong>: <%= action.description %>
-        </li>
-      <% }) %>
-    </ul>
-  </section>
-  <footer>© 2025 Save Mother Nature</footer>
+  <header>
+    <h1>Take Action</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/learn">Learn</a>
+      <a href="/get-involved">Get Involved</a>
+      <a href="/take-action">Take Action</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Your Actions Matter</h2>
+      <p>
+        Every small step leads to a big change. Here are some ways you can 
+        take action today to help save our planet.
+      </p>
+    </section>
+    <section>
+      <h2>Practical Steps</h2>
+      <ul>
+        <li>Switch to reusable bags, bottles, and containers.</li>
+        <li>Reduce energy and water consumption.</li>
+        <li>Advocate for policy changes in your community.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Save Mother Nature</p>
+    <p>
+      Follow us on 
+      <a href="https://twitter.com" target="_blank">Twitter</a>, 
+      <a href="https://facebook.com" target="_blank">Facebook</a>, and 
+      <a href="https://instagram.com" target="_blank">Instagram</a>.
+    </p>
+  </footer>
 </body>
 </html>
+
