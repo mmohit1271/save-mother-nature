@@ -4,7 +4,7 @@ const sqlite3 = require("sqlite3").verbose();
 
 // Initialize Express
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 80;
 
 // Connect to SQLite database (or create it if it doesn't exist)
 const db = new sqlite3.Database("./database.sqlite", (err) => {
@@ -118,5 +118,5 @@ app.get("/api/actions", (req, res) => {
 
 // Start the server
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://0.0.0.0:${PORT}`);
 });
