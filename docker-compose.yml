@@ -7,20 +7,3 @@ services:
     volumes:
       - .:/app
     command: npm start
-    networks:
-      - app-network
-
-  nginx:
-    image: nginx:latest
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    ports:
-      - "80:80"
-    depends_on:
-      - web
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
