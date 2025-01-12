@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Donate - Save Mother Nature</title>
+</head>
+<body>
+  <header>
+    <h1>Make a Difference with Your Donation</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/learn">Learn</a>
+      <a href="/get-involved">Get Involved</a>
+      <a href="/take-action">Take Action</a>
+      <a href="/contact">Contact</a>
+      <a href="/donate">Donate</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Support Our Mission</h2>
+      <p>Your donation helps us fund initiatives to protect and preserve the environment. Every contribution counts!</p>
+    </section>
+    <% if (message) { %>
+      <p class="success-message"><%= message %></p>
+    <% } %>
+    <form action="/donate" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="amount">Donation Amount ($):</label>
+      <input type="number" id="amount" name="amount" required>
+
+      <button type="submit">Donate Now</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2025 Save Mother Nature</p>
+  </footer>
+</body>
+</html>
+
