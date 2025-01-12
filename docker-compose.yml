@@ -1,9 +1,9 @@
 version: "3.8"
 services:
   web:
-    image: mmohit1271/save-mother-nature:latest # Use the image pushed to Docker Hub
+    build: .
     ports:
-      - "80:80" # Map port 80 on host to port 80 in container
-    environment:
-      - NODE_ENV=production # Set production environment
-    restart: always # Ensure the container restarts on failure
+      - "80:80"  # Map host port 80 to container port 80
+    volumes:
+      - .:/app
+    command: npm start
